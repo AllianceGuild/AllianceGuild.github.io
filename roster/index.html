@@ -9,7 +9,20 @@ html
 </style>
 
 <script>
-console.log("WHY")
+alert("2")
 
+	var url = "https://allianceguild.github.io/chronicles.json";
+
+var jsonFile = new XMLHttpRequest();
+    jsonFile.open("GET",url,true);
+    jsonFile.send();
+
+    jsonFile.onreadystatechange = function() {
+        if (jsonFile.readyState== 4 && jsonFile.status == 200) {
+            document.body.innerHTML = jsonFile.responseText;
+		
+        }
+     }
+	
 </script>
 </html>
